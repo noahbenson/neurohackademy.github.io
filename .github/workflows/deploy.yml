@@ -30,15 +30,22 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3.10'
+          ruby-version: '3.4'
           bundler-cache: true
       - name: Building with Jekyll
-        uses: actions/jekyll-build-pages@v1
+        uses: limjh16/jekyll-action-ts@v2
         with:
-          source: ./
-          destination: ./_site
+          enable_cache: true
+      #- name: Building with Jekyll
+      #  uses: actions/jekyll-build-pages@v1
+      #  with:
+      #    source: ./
+      #    destination: ./_site
       - name: Uploading artifacts
         uses: actions/upload-pages-artifact@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
   # Deployment job
   deploy:
     environment:
