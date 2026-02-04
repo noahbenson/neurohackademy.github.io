@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      {% if page.title %}{{page.title}} – {% endif %}{{site.title}}
+      {% if site.suffix %}, {{site.suffix}}{% endif %}
+      </title>
+    {% include meta.html %}
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+        </script>
+    <![endif]-->
+    <link rel="stylesheet"
+          type="text/css"
+          href="{{site.baseurl}}/style.css"/>
+    <link rel="alternate"
+          type="application/rss+xml"
+          title="{{site.title}}"
+          href="{{site.baseurl}}/feed.xml" />
+    {% include scripts.html %}
+    <!-- Originally created with Jekyll Now -
+         http://github.com/barryclark/jekyll-now;
+         heavily modified by hand since. -->
+    </head>
+  <body>
+
+    <div class="wrapper-masthead">
+      <div class="headcontainer">
+        <center>
+          <img src="{{site.baseurl}}/{{site.imgpath}}/nh-logo-brain-gold.png"
+               alt="The Neurohackademy logo in front of a sketck of a brain"
+               width="60%"/>
+          <p style="font-size: 32px; margin-top: 40hv; margin: 50px;">
+            The Neurohackademy is a two-week summer course in neuroimaging and
+            data science for researchers.
+            </p>
+          <p>&#8964;</p>
+          </center>
+        </div>
+      </div>
+    <header class="masthead clearfix">
+      <a id="top"></a>
+      <center>
+        <div class="headertitle">
+          <img src="{{site.baseurl}}/{{site.imgpath}}/nh-neuron-thin.png"
+               alt="The Neurohackademy"/>
+          </div>
+        </center>
+      <nav>
+        <a href="{{site.baseurl}}/#top">
+          Home</a>
+        <a href="{{site.baseurl}}/lectures/#top">
+          Lectures</a>
+        <a href="{{site.baseurl}}/apply/#top">
+          Apply</a>
+        <a href="{{site.baseurl}}/code-of-conduct/#top">
+          Code of Conduct</a>
+        </nav>
+      </header>
+
+    <div id="main" role="main" class="container">
+      {{content}}
+      </div>
+
+    <div class="wrapper-footer">
+      <p>
+        The Neurohackademy is a two-week course in neuroimaging and data science.
+        No credit or certification is offered to participants.
+        </p>
+      {% if site.divlogo %}
+        <p>
+          {% if site.divurl %} <a href="{{site.divurl}}"> {% endif %}
+          <img src="{{site.baseurl}}/{{site.divlogo}}"
+               {% if site.divname %}
+                 alt="The logo for {{site.divname}}"
+               {% else %}
+                 alt="The logo for the sponsoring division"
+               {% endif %}
+               height="40"/>
+          {% if site.divurl %} </a> {% endif %}
+          </p>
+        {% endif %}
+      {% if site.orglogo %}
+        <p>
+          {% if site.orgurl %} <a href="{{site.orgurl}}"> {% endif %}
+          <img src="{{site.baseurl}}/{{site.orglogo}}"
+               {% if site.orgname %}
+                 alt="The logo for {{site.orgname}}"
+               {% else %}
+                 alt="The logo for the sponsoring organization"
+               {% endif %}
+               height="40"/>
+          {% if site.orgurl %} </a> {% endif %}
+          </p>
+        {% endif %}
+      <img src="{{site.baseurl}}/{{site.imgpath}}/NIH-NIMH-logo.svg"
+           alt="The National Institute of Mental Health logo"
+           class="nimhlogo"
+           height="96px"/>
+      </div>
+    
+
+    {% include analytics.html %}
+    </body>
+  </html>
