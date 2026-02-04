@@ -14,4 +14,38 @@
   div.toTop {width: 100%; vertical-align: middle; text-align: right; margin-top: -20px; margin-bottom: 0px; font-size: 10pt;}
 </style>
 
-
+<script>
+  let refDiv = null;
+  let refY = 0;
+  window.onload = function() {
+    refDiv = document.getElementById('stickyPlaceholder');
+    const rect = refDiv.getBoundingClientRect();
+    refY = rect.top;
+  };
+  window.addEventListener('scroll', (event) => {
+    // Get the div element
+    const dynamicDiv = document.getElementById('pageHeader');
+  
+    // Get the current scroll position from the top of the viewport
+    const rect = refDiv.getBoundingClientRect();
+    const newY = rect.top;
+  
+    // Define the desired behavior (e.g., height changes as user scrolls down)
+    // Example: Start height at 100px and decrease as user scrolls
+    const maxHeight = 404;
+    const minHeight = 128;
+  
+    let newHeight = 0;
+    if (newY < minHeight) {
+       newHeight = minHeight;
+    } else if (newY > maxHeight) {
+       newHeight = maxHeight;
+    } else {
+       newHeight = newY;
+    }
+    console.log(" +++ " + refY + '  ' + newY + ' ' + newHeight);
+  
+    // Apply the new height to the div
+    dynamicDiv.style.height = newHeight + 'px';
+  });
+  </script>

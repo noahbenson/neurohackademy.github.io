@@ -25,7 +25,7 @@
   <body>
 
     <div class="wrapper-masthead">
-      <div class="headcontainer">
+      <div class="splash">
         <center>
           <img src="{{site.baseurl}}/{{site.imgpath}}/nh-logo-brain-gold.png"
                alt="The Neurohackademy logo in front of a sketck of a brain"
@@ -38,14 +38,9 @@
           </center>
         </div>
       </div>
-    <header class="masthead clearfix">
+    <header class="masthead clearfix" id="pageHeader">
       <a id="top"></a>
-      <center>
-        <div class="headertitle">
-          <img src="{{site.baseurl}}/{{site.imgpath}}/nh-neuron-thin.png"
-               alt="The Neurohackademy"/>
-          </div>
-        </center>
+      <div class="headertitle"></div>
       <nav>
         <a href="{{site.baseurl}}/#top">
           Home</a>
@@ -57,10 +52,13 @@
           Code of Conduct</a>
         </nav>
       </header>
+    <div class="content-placeholder"></div>
 
-    <div id="main" role="main" class="container">
-      {{content}}
-      </div>
+    <main id="stickyPlaceholder">
+      <div id="main" role="main" class="container">
+        {{content}}
+        </div>
+      </main>
 
     <div class="wrapper-footer">
       <p>

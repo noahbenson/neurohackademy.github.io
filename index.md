@@ -6,7 +6,7 @@ layout: default
 
 **Neurohackademy is a two-week workshop in neuroimaging and data science, held
 both at the [University of Washington](https://www.washington.edu/) campus in
-Seattle and online each summer.** https://escience.washington.edu/).**
+Seattle and online each summer.**
 
 This year’s course will be held from July 13th&ndash;24th, 2026. Applications
 are [currently open](/apply) and will close on March 16th. Applicants will be

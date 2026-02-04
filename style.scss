@@ -44,7 +44,7 @@ body b, body strong {
     height: 100%;
 }
 
-.headcontainer {
+.splash {
     width: 100%;
     background: #85754D;
     font-color: #FFFFFF;
@@ -74,6 +74,9 @@ h1 {
 }
 
 .headertitle {
+    height: 100%;
+    max-height: 330px;
+    min-height: 128px;
     padding: 0px;
     width: 100%;
     text-align: center;
@@ -81,6 +84,10 @@ h1 {
     border-bottom: 5px solid #FFFCF3;
     background: #5A5A5A;
     line-height: 0px;
+    background-image: url('/static/images/nh-neuron-thin.png');
+    background-repeat: no-repeat; /* prevents the image from tiling */
+    background-size: auto 320px; /* height is 100% of div, width is auto-scaled */
+    background-position: center 65%;
 }
 
 h2 {
@@ -194,6 +201,7 @@ img {
 }
 
 .masthead {
+    height: 404px;
     padding-top: 0;
     text-align: center;
     width: 100%;
@@ -201,7 +209,6 @@ img {
     font-family: $helveticaNeue;
     font-size: 18pt;
     background-color: #5A5A5A;
-    border-bottom: 5px solid #A187CF;
     /* sticky header */
     position: sticky;
     top: 0px;
@@ -212,15 +219,22 @@ img {
     }
 }
 
+.header.sticky {
+    height: 128px;
+}
+.content-placeholder {
+    height: 0;
+}
+
 nav {
-    float: center;
     font-family: $helveticaNeue;
     font-size: 18pt;
     background-color: #85754D;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 25px;
+    padding: 18px;
+    border-bottom: 5px solid #A187CF;
   
     @include mobile {
         float: none;
@@ -240,8 +254,7 @@ nav {
         vertical-align: middle;
         
         @include mobile {
-            margin: 0 20px;
-            color: $blue;
+            margin: 0 15px;
         }
     }
 }
