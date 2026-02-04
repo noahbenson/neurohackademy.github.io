@@ -84,7 +84,7 @@ h1 {
     border-bottom: 5px solid #FFFCF3;
     background: #5A5A5A;
     line-height: 0px;
-    background-image: url('/static/images/nh-neuron-thin.png');
+    background-image: url('{{site.baseurl}}/{{site.imgpath}}/nh-neuron-thin.png');
     background-repeat: no-repeat; /* prevents the image from tiling */
     background-size: auto 320px; /* height is 100% of div, width is auto-scaled */
     background-position: center 65%;
