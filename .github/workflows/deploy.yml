@@ -32,8 +32,6 @@ jobs:
         with:
           ruby-version: '3.x'
           bundler-cache: true
-      - name: Run a single command
-        run: bundle install
       - name: Building with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
