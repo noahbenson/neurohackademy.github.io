@@ -15,37 +15,35 @@
 </style>
 
 <script>
+  const maxHeight = 404;
+  const minHeight = 128;
   let refDiv = null;
-  let refY = 0;
+  let navEl = null;
+  let dynamicDiv = null;
   window.onload = function() {
+    dynamicDiv = document.getElementById('pageHeader');
     refDiv = document.getElementById('stickyPlaceholder');
-    const rect = refDiv.getBoundingClientRect();
-    refY = rect.top;
+    navEl = document.querySelector('nav');
+    const rect = navEl.getBoundingClientRect();
   };
   window.addEventListener('scroll', (event) => {
-    // Get the div element
-    const dynamicDiv = document.getElementById('pageHeader');
-  
-    // Get the current scroll position from the top of the viewport
-    const rect = refDiv.getBoundingClientRect();
-    const newY = rect.top;
-  
-    // Define the desired behavior (e.g., height changes as user scrolls down)
-    // Example: Start height at 100px and decrease as user scrolls
-    const maxHeight = 404;
-    const minHeight = 128;
-  
-    let newHeight = 0;
-    if (newY < minHeight) {
+    // Get the current position of the bottom of the nav bar
+    let rect = navEl.getBoundingClientRect();
+    navBot = rect.bottom;
+    // And the current scroll position of the reference from the nav bar.
+    rect = refDiv.getBoundingClientRect();
+    const newY = navBot - rect.top;
+    const refHeight = rect.height;
+    let newHeight = maxHeight - newY;
+    if (newHeight < minHeight) {
        newHeight = minHeight;
-    } else if (newY > maxHeight) {
+    } else if (newHeight > maxHeight) {
        newHeight = maxHeight;
-    } else {
-       newHeight = newY;
     }
-    /*console.log(" +++ " + refY + '  ' + newY + ' ' + newHeight);*/
-  
+    rect = dynamicDiv.getBoundingClientRect();
+    const deltaY = rect.height - newHeight;
     // Apply the new height to the div
     dynamicDiv.style.height = newHeight + 'px';
+    refDiv.style.height = (refHeight + deltaY) + 'px';
   });
   </script>

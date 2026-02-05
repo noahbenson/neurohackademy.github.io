@@ -27,14 +27,16 @@
     <div class="wrapper-masthead">
       <div class="splash">
         <center>
-          <img src="{{site.baseurl}}/{{site.imgpath}}/nh-logo-brain-gold.png"
-               alt="The Neurohackademy logo in front of a sketck of a brain"
-               width="60%"/>
-          <p style="font-size: 32px; margin-top: 40hv; margin: 50px;">
-            The Neurohackademy is a two-week summer course in neuroimaging and
-            data science for researchers.
-            </p>
-          <p>&#8964;</p>
+          <div class="masthead-spacer">
+            <img src="{{site.baseurl}}/{{site.imgpath}}/nh-logo-brain-gold.png"
+                 alt="The Neurohackademy logo in front of a sketck of a brain"
+                 style="height: 40vw"/>
+            <p class="masthead-text">
+              The Neurohackademy is a two-week summer course in neuroimaging and
+              data science for researchers.
+              </p>
+            <p class="masthead-text">&#8964;</p>
+            </div>
           </center>
         </div>
       </div>
@@ -52,9 +54,9 @@
           Code of Conduct</a>
         </nav>
       </header>
-    <div class="content-placeholder"></div>
+    <div class="content-placeholder" id="stickyPlaceholder"></div>
 
-    <main id="stickyPlaceholder">
+    <main>
       <div id="main" role="main" class="container">
         {{content}}
         </div>

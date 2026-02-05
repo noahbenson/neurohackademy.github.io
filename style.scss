@@ -48,7 +48,7 @@ body b, body strong {
     width: 100%;
     background: #85754D;
     font-color: #FFFFFF;
-    min-height: 105vh;
+    min-height: 120vh;
     height: 100%;
 }
 
@@ -217,6 +217,14 @@ img {
     @include mobile {
         text-align: center;
     }
+}
+
+.masthead-text {
+    font-size: 32px;
+    margin: 10px;
+}
+.masthead-spacer {
+    padding: 20px 50px 25vh 50px;
 }
 
 .header.sticky {
