@@ -20,13 +20,7 @@
   let refDiv = null;
   let navEl = null;
   let dynamicDiv = null;
-  window.onload = function() {
-    dynamicDiv = document.getElementById('pageHeader');
-    refDiv = document.getElementById('stickyPlaceholder');
-    navEl = document.querySelector('nav');
-    const rect = navEl.getBoundingClientRect();
-  };
-  window.addEventListener('scroll', (event) => {
+  let scrollFn = () => {
     // Get the current position of the bottom of the nav bar
     let rect = navEl.getBoundingClientRect();
     navBot = rect.bottom;
@@ -45,5 +39,12 @@
     // Apply the new height to the div
     dynamicDiv.style.height = newHeight + 'px';
     refDiv.style.height = (refHeight + deltaY) + 'px';
-  });
+  };
+  window.onload = () => {
+    dynamicDiv = document.getElementById('pageHeader');
+    refDiv = document.getElementById('stickyPlaceholder');
+    navEl = document.querySelector('nav');
+    scrollFn();
+    window.addEventListener('scroll', scrollFn);
+  };
   </script>
