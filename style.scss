@@ -66,7 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    margin: 30px 0 30px 0;
+    margin: 20px 0 20px 0;
     font-size: 30px;
     font-weight: 400;
     a {
@@ -114,7 +114,7 @@ h4 {
 }
 
 p {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 a {
@@ -353,6 +353,104 @@ footer {
    padding: 2px;
    font-size: 18px;
 }
+
+/* Calendar stuff */
+.week-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.day-col {
+    width: 18%;
+    min-width: 100px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 4px;
+    border-radius: 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex: 1;
+    color: #000000;
+    background: #FFFCF3;
+    padding: 0 5px 0 5px;
+}
+.day-name {
+    color: #341954;
+    font-weight: 450;
+    font-decoration: underline;
+    text-align: center;
+}
+.event-cell {
+    margin: 4px 0 4px 0;
+    border-radius: 15px;
+    padding: 5px 3px 5px 3px;
+    background: #341954;
+    color: #FFFFFF;
+    text-align: center;
+}
+.event-time {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.event-title {
+    margin-left: 6px;
+    margin: 2px 4px 2px 6px;
+    font-size: 14px;
+    a {
+      font-size: 14px;
+    }
+}
+.event-speakers {
+    font-style: italic;
+    font-size: 14px;
+    margin: 2px 4px 2px 6px;
+}
+
+/* Accordion for calendars */
+
+.my-accordion {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  background: none;
+  text-align: left;
+  /*cursor: pointer;*/
+}
+
+.accordion-header:hover,
+.accordion-header:focus {
+  /*background-color: #0056b3;*/
+}
+
+.accordion-panel {
+  padding: 1rem;
+  display: none; /* Hidden by default */
+}
+
+.accordion-panel p {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .accordion-header {
+    font-size: 18pt;
+    padding: 0.8rem;
+  }
+  .accordion-panel {
+    padding: 0.8rem;
+  }
+}
+
 
 /* Settled on moving the import of syntax highlighting to the bottom of the CSS
  * ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
