@@ -1,106 +1,47 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>
-      {% if page.title %}{{page.title}} – {% endif %}{{site.title}}
-      {% if site.suffix %}, {{site.suffix}}{% endif %}
-      </title>
-    {% include meta.html %}
-    <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
-        </script>
-    <![endif]-->
-    <link rel="stylesheet"
-          type="text/css"
-          href="{{site.baseurl}}/style.css"/>
-    <link rel="alternate"
-          type="application/rss+xml"
-          title="{{site.title}}"
-          href="{{site.baseurl}}/feed.xml" />
-    {% include scripts.html %}
-    <!-- Originally created with Jekyll Now -
-         http://github.com/barryclark/jekyll-now;
-         heavily modified by hand since. -->
-    </head>
-  <body>
+<!DOCTYPE html> <html>
+<head>
+  <title>
+    {% if page.title %} {{page.title}} – {% endif %}
+    {{site.title}}{% if site.suffix %}, {{site.suffix}}{% endif %}
+    </title>
+  {% include meta.html %}
+  <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+      </script>
+  <![endif]-->
+  <link rel="stylesheet"
+        type="text/css"
+        href="{{site.baseurl}}/style.css"/>
+  <link rel="alternate"
+        type="application/rss+xml"
+        title="{{site.title}}"
+        href="{{site.baseurl}}/feed.xml"/>
+  {% include scripts.html %}
+  <!-- Originally created with Jekyll Now -
+       http://github.com/barryclark/jekyll-now;
+       heavily modified by hand since. -->
+  </head>
 
-    <div class="wrapper-masthead">
-      <div class="splash">
-        <center>
-          <div class="masthead-spacer">
-            <img src="{{site.baseurl}}/{{site.imgpath}}/nh-logo-brain-gold.png"
-                 alt="The Neurohackademy logo in front of a sketck of a brain"
-                 style="height: 40vw"/>
-            <p class="masthead-text">
-              The Neurohackademy is a two-week summer course in neuroimaging and
-              data science for researchers.
-              </p>
-            <p class="masthead-text">&#8964;</p>
-            </div>
-          </center>
-        </div>
+<body>
+  <div class="default-masthead">
+    <div class="default-banner-container">
+      <div class="default-banner"></div>
       </div>
-    <header class="masthead clearfix" id="pageHeader">
-      <div class="headertitle">
-        <!-- <a id="top" class="topanchor"></a> -->
-        </div>
-      <nav>
-        <a href="{{site.baseurl}}/#top">
-          Home</a>
-        <a href="{{site.baseurl}}/course-content/#top">
-          Course Content</a>
-        <a href="{{site.baseurl}}/apply/#top">
-          Apply</a>
-        <a href="{{site.baseurl}}/code-of-conduct/#top">
-          Code of Conduct</a>
-        </nav>
+    <header class="clearfix" id="pageHeader">
+      {% include navbar.html %}
       </header>
-    <div class="content-placeholder" id="stickyPlaceholder"></div>
-    <main>
+    </div>
+  <main>
+    <div class="container-wrapper">
       <div id="main" role="main" class="container">
-        <a id="top" class="topanchor"></a>
         {{content}}
         </div>
-      </main>
-
-    <div class="wrapper-footer">
-      <p>
-        The Neurohackademy is a two-week course in neuroimaging and data science.
-        No credit or certification is offered to participants.
-        </p>
-      {% if site.divlogo %}
-        <p>
-          {% if site.divurl %} <a href="{{site.divurl}}"> {% endif %}
-          <img src="{{site.baseurl}}/{{site.divlogo}}"
-               {% if site.divname %}
-                 alt="The logo for {{site.divname}}"
-               {% else %}
-                 alt="The logo for the sponsoring division"
-               {% endif %}
-               height="40"/>
-          {% if site.divurl %} </a> {% endif %}
-          </p>
-        {% endif %}
-      {% if site.orglogo %}
-        <p>
-          {% if site.orgurl %} <a href="{{site.orgurl}}"> {% endif %}
-          <img src="{{site.baseurl}}/{{site.orglogo}}"
-               {% if site.orgname %}
-                 alt="The logo for {{site.orgname}}"
-               {% else %}
-                 alt="The logo for the sponsoring organization"
-               {% endif %}
-               height="40"/>
-          {% if site.orgurl %} </a> {% endif %}
-          </p>
-        {% endif %}
-      <img src="{{site.baseurl}}/{{site.imgpath}}/NIH-NIMH-logo.svg"
-           alt="The National Institute of Mental Health logo"
-           class="nimhlogo"
-           height="96px"/>
       </div>
-    
+    </main>
 
-    {% include analytics.html %}
-    </body>
-  </html>
+  {% include footer.html %}
+
+  {% include analytics.html %}
+  </body>
+
+</html>

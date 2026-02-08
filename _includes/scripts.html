@@ -10,40 +10,4 @@
   });
 </script>
 
-<style>
-  div.toTop {width: 100%; vertical-align: middle; text-align: right; margin-top: -20px; margin-bottom: 0px; font-size: 10pt;}
-</style>
-
-<script>
-  const maxHeight = 404;
-  const minHeight = 128;
-  let refDiv = null;
-  let navEl = null;
-  let dynamicDiv = null;
-  let scrollFn = () => {
-    // Get the current position of the bottom of the nav bar
-    let rect = navEl.getBoundingClientRect();
-    navBot = rect.bottom;
-    // And the current scroll position of the reference from the nav bar.
-    rect = refDiv.getBoundingClientRect();
-    const newY = navBot - rect.top;
-    const refHeight = rect.height;
-    let newHeight = maxHeight - newY;
-    if (newHeight < minHeight) {
-       newHeight = minHeight;
-    } else if (newHeight > maxHeight) {
-       newHeight = maxHeight;
-    }
-    rect = dynamicDiv.getBoundingClientRect();
-    const deltaY = rect.height - newHeight;
-    // Apply the new height to the div
-    dynamicDiv.style.height = newHeight + 'px';
-    refDiv.style.height = (refHeight + deltaY) + 'px';
-  };
-  window.onload = () => {
-    dynamicDiv = document.getElementById('pageHeader');
-    refDiv = document.getElementById('stickyPlaceholder');
-    navEl = document.querySelector('nav');
-    window.addEventListener('scroll', scrollFn);
-  };
-  </script>
+{% assign year={{ 'now' | date: "%Y" }} %}
