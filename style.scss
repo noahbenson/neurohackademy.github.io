@@ -65,14 +65,14 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     margin: 10px 0 10px 0;
     font-size: 48px;
-    font-weight: 400;
+    font-weight: 600;
     a {
         color: inherit;
     }
 }
 
 h2 {
-    font-weight: 350;
+    font-weight: 500;
     font-size: 42px;
 }
 
@@ -329,6 +329,48 @@ nav {
  * The content page / event and search stuff
  */
 
+.cc-year-div {
+}
+.cc-week-div {
+}
+.cc-day-div {
+}
+.cc-year-h2 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.cc-week-h3 {
+  margin-top: 8px;
+  padding-top: 8px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.cc-day-h4 {
+  margin-top: 8px;
+  padding-top: 8px;
+}
+.cc-sel-year-maindiv {
+  margin: 8px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.cc-sel-year-yearsdiv {
+  margin: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.cc-sel-year-label {
+    margin: 16px; 
+    width: 80px;
+    white-space: nowrap;
+}
 .cc-list {
   display: flex;
   flex-direction: column;
@@ -394,7 +436,7 @@ nav {
   height: 64px;
 }
 .cc-click {
-  margin: 0;
+  margin: 0 8px;
   padding: 0;
   border: 0;
   width: 72px;
@@ -407,8 +449,9 @@ nav {
   transform: rotate(90deg);
 }
 .cc-playarrow {
-  height: 64px;
+  height: 72px;
   width: 72px;
+  min-width: 72px;
   margin: 0 8px;
   display: flex;
   align-items: center;
@@ -416,8 +459,9 @@ nav {
   cursor: pointer;
 }
 .cc-noarrow {
-  height: 64px;
+  height: 72px;
   width: 72px;
+  min-width: 72px;
   margin: 0 8px;
   display: flex;
   align-items: center;
@@ -494,13 +538,27 @@ nav {
 }
 
 .footer {
+  height: 160px;
+  width: 100%;
   margin-top: 0px;
   border-top: 3px solid var(--menu-bg-color);
   padding-bottom: 20px;
   background: var(--cap-bg-color);
   font-size: 16px;
+}
+.footer-col {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  height: 160px;
+  justify-content: space-between;
+}
+.footer-row {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  text-align: center;
   justify-content: center;
 }
 

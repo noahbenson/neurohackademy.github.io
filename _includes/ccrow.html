@@ -1,6 +1,4 @@
-<!-- This include is for a course-content row, which links to all the relevant
-     pages about the course. 
-     The includes are year, week, day, and event. -->
+<!-- course content row -->
 {% assign tmpTag="cctag" | append: "-"
     | append: include.year | append: include.week 
     | append: include.day | include.time
@@ -18,7 +16,7 @@
       </div>
     <p class="cc-time">{{include.time}}</p>
     {% if include.youtube_url %}
-      <div class="cc-click" id="click-{{tmpTag}}">
+      <div class="cc-click" id="click-{{tmpTag}}" tabindex="0">
         <p class="cc-playarrow">&#x25B6;</p>
         </div>
     {% else %}
@@ -35,6 +33,7 @@
               title="YouTube Video Player"
               id="iframe-{{tmpTag}}"
               style="width: 100%; height: 100%;"
+              tabindex="-1"
               frameborder="0"
               loading="lazy"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
