@@ -349,14 +349,17 @@ nav {
   margin-top: 8px;
   padding-top: 8px;
 }
-.cc-sel-year-maindiv {
+.cc-sel-maindiv {
   margin: 8px;
   display: flex;
   justify-content: left;
   align-items: center;
   flex-wrap: nowrap;
 }
-.cc-sel-year-yearsdiv {
+.cc-sel-rowlbl {
+    margin: 8px 16px;
+}
+.cc-sel-optsdiv {
   margin: 8px;
   width: 100%;
   display: flex;
@@ -366,7 +369,7 @@ nav {
   flex-wrap: wrap;
   gap: 16px;
 }
-.cc-sel-year-label {
+.cc-sel-checkbox-label {
     margin: 16px; 
     width: 80px;
     white-space: nowrap;
@@ -571,25 +574,132 @@ nav {
     background-color: #FFFFFF;
 }
 
-.speaker-image-left {
-   width: 200px;
-   vertical-align: top;
-   text-align: left;
+/*
+ * People page stuff.
+ */
+.biocard {
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
 }
-.speaker-image-right {
-   width: 200px;
-   vertical-align: top;
-   text-align: right;
+.biocard-textdiv {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    text-align: left;
+    justify-content: space-between;
 }
-.speaker-bio {
-   padding: 12px 0;
-   text-align: justify;
+.biocard-photodiv {
+    flex-grow: 0;
+    min-width: 275px;
+    height: 350px;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.hbio {
-   margin: 2px;
-   padding: 2px;
-   font-size: 18px;
+.biocard-photodiv img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid var(--border-color);
 }
+.biocard-chunk {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: left;
+}
+.biocard-chunk h1 {
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+.biocard-chunk h2 {
+    margin: 0px;
+    padding: 0px;
+    line-height: 1em;
+}
+.biocard-chunk p {
+    margin: 0px;
+    padding: 0px;
+}
+.biocard-name {
+    font-size: 48px;
+    text-align: left;
+    margin-bottom: 3px;
+}
+.biocard-pronouns {
+    font-style: italic;
+    font-weight: 200;
+    font-size: 30px;
+    text-align: left;
+}
+.biocard-org {
+    font-size: 40px;
+    font-weight: 350;
+    text-align: left;
+}
+.biocard-div {
+    font-size: 40px;
+    font-weight: 350;
+    text-align: left;
+}
+.biocard-links {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-contents: left;
+}
+.biocard-link {
+    font-size: 28px;
+    margin: 0 5px;
+}
+.biocard-small .biocard-textdiv {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+}
+.biocard-small .biocard-name {
+    font-size: 32px;
+    text-align: left;
+    margin-bottom: 6px;
+}
+.biocard-small .biocard-pronouns {
+    font-style: italic;
+    font-weight: 200;
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.biocard-small .biocard-org {
+    font-size: 30px;
+    font-weight: 250;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.biocard-small .biocard-div {
+    font-size: 30px;
+    font-weight: 300;
+    text-align: left;
+    margin-bottom: 2px;
+}
+.biocard-small .biocard-link {
+    font-size: 24px;
+    margin: 0 5px;
+}
+
 
 /* Calendar stuff */
 .week-row {

@@ -7,7 +7,7 @@
         title: Welcome to NeuroHackademy!
         event_page: https://neurohackademy.org/course/welcome-to-neurohackademy/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         - Ariel Rokem
         youtube_url: https://www.youtube.com/embed/wLpHq-7KJoA?rel=0
       - time: 10:00am
@@ -71,7 +71,7 @@
         title: Scientific computing in Python
         event_page: https://neurohackademy.org/course/scientific-computing-in-python/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/jyIe-aIm-3U?rel=0
       - time: 10:30am
         title: Designing and implementing Python libraries
@@ -111,14 +111,14 @@
         title: Introduction to deep learning (pytorch)
         event_page: https://neurohackademy.org/course/introduction-to-deep-learning-pytorch/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/FD7KgBmCdws?rel=0
       Wednesday:
       - time: 9:00am
         title: Hands on group projects
         event_page: https://neurohackademy.org/course/hands-on-group-projects/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/8oHN6mFCPcI?rel=0
       - time: 10:00am
         title: Coffee break
@@ -153,7 +153,7 @@
         event_page: https://neurohackademy.org/course/hands-on-group-projects/
         speakers:
         - Ariel Rokem
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/8oHN6mFCPcI?rel=0
       - time: 3:30pm
         title: Center for Human Neuroscience visit
@@ -210,7 +210,7 @@
         title: Dataset showcase
         event_page: https://neurohackademy.org/course/dataset-showcase/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         - Ariel Rokem
         youtube_url: https://www.youtube.com/embed/-ixOdjAbz-o?rel=0
       - time: 10:00am
@@ -234,7 +234,7 @@
         event_page: https://neurohackademy.org/course/hands-on-group-projects/
         speakers:
         - Ariel Rokem
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/8oHN6mFCPcI?rel=0
       - time: 3:00pm
         title: Coffee break
@@ -376,7 +376,7 @@
         title: Welcome to NeuroHackademy!
         event_page: https://neurohackademy.org/course/welcome-to-neurohackademy/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         - Ariel Rokem
         youtube_url: https://www.youtube.com/embed/wLpHq-7KJoA?rel=0
       - time: 10:00am
@@ -451,7 +451,7 @@
         title: Introduction to version control with git
         event_page: https://neurohackademy.org/course/introduction-to-version-control-with-git/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/nedvnTtmE2s?rel=0
       - time: 1:30pm
         title: Collaboration patterns with git and GitHub
@@ -493,7 +493,7 @@
         title: Docker
         event_page: https://neurohackademy.org/course/docker/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: null
       - time: 12:00pm
         title: Lunch
@@ -510,7 +510,7 @@
         title: Introduction to deep learning
         event_page: https://neurohackademy.org/course/introduction-to-deep-learning/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/3owNA-17F5Q?rel=0
       - time: 3:00pm
         title: Coffee break
@@ -585,7 +585,7 @@
         title: Dataset showcase
         event_page: https://neurohackademy.org/course/dataset-showcase/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         - Ariel Rokem
         youtube_url: https://www.youtube.com/embed/-ixOdjAbz-o?rel=0
       - time: 12:00pm
@@ -608,7 +608,7 @@
         title: Review sessions
         event_page: https://neurohackademy.org/course/review-sessions/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         - Kelly Chang
         - Ariel Rokem
         youtube_url: https://www.youtube.com/embed/RY8OYqJepWM?rel=0
@@ -759,7 +759,7 @@
         event_page: https://neurohackademy.org/course/introduction-to-neurohackademy/
         speakers:
         - Ariel Rokem
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: null
       - time: 10:00am
         title: Coffee break
@@ -844,7 +844,7 @@
         title: Introduction to version control with git
         event_page: https://neurohackademy.org/course/introduction-to-version-control-with-git/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/nedvnTtmE2s?rel=0
       - time: 1:30pm
         title: Collaboration patterns with git/GitHub
@@ -880,7 +880,7 @@
         title: Software containerization with Docker
         event_page: https://neurohackademy.org/course/software-containerization-with-docker/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/qhWhNs9vInk?rel=0
       - time: 10:30am
         title: Data visualization in Python
@@ -983,7 +983,7 @@
         title: Introduction to deep learning
         event_page: https://neurohackademy.org/course/introduction-to-deep-learning/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/3owNA-17F5Q?rel=0
       - time: 12:00pm
         title: Lunch
@@ -995,7 +995,7 @@
         event_page: https://neurohackademy.org/course/data-showcase/
         speakers:
         - Ariel Rokem
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/lRMLYpYTT1M?rel=0
       - time: 3:00pm
         title: Coffee break
@@ -1008,7 +1008,7 @@
         speakers:
         - Ariel Rokem
         - John Kruper
-        - Noah Benson
+        - Noah C. Benson
         - Kelly Chang
         youtube_url: https://www.youtube.com/embed/RY8OYqJepWM?rel=0
     week2:
@@ -1164,7 +1164,7 @@
         event_page: https://neurohackademy.org/course/welcome-to-neurohackademy/
         speakers:
         - Ariel Rokem
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/wLpHq-7KJoA?rel=0
       - time: 9:30am
         title: Icebreaker
@@ -1209,7 +1209,7 @@
         title: 'Introduction to Python: the Basics'
         event_page: https://neurohackademy.org/course/introduction-to-python-the-basics/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: null
       - time: 9:00am
         title: Data management in Python/Pandas
@@ -1237,7 +1237,7 @@
         title: Git from Scratch
         event_page: https://neurohackademy.org/course/git-from-scratch/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/cD2GRMpbHfE?rel=0
       - time: 1:30pm
         title: Collaboration patterns with Git
@@ -1249,7 +1249,7 @@
         title: Docker
         event_page: https://neurohackademy.org/course/docker/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: null
       - time: 5:00pm
         title: Poster session
@@ -1267,7 +1267,7 @@
         title: 'Introduction to Python: Control Flow'
         event_page: https://neurohackademy.org/course/introduction-to-python-control-flow/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/Ht-NgBFwkgM?rel=0
       - time: 10:00am
         title: Coffee break
@@ -1314,7 +1314,7 @@
         title: 'Introduction to Python: NumPy'
         event_page: https://neurohackademy.org/course/introduction-to-python-numpy/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/v6-voEU5WJ0?rel=0
       - time: 10:00am
         title: Coffee break
@@ -1348,7 +1348,7 @@
         title: Deep learning
         event_page: https://neurohackademy.org/course/deep-learning/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/nzJ7A1KevSk?rel=0
       Friday:
       - time: 9:00am
@@ -1381,13 +1381,13 @@
         - Melanie Ganz
         - Kendrick Kay
         - Adam Richie-Halford
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/lRMLYpYTT1M?rel=0
       - time: 3:00pm
         title: Review session 1
         event_page: https://neurohackademy.org/course/review-session-1/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/0nLpSLXUbeE?rel=0
       - time: 3:30pm
         title: Review session 2
@@ -1513,7 +1513,7 @@
         title: "Breakout session"
         event_page: "https://neurohackademy.org/course/breakout-session/"
         speakers:
-          - "Noah Benson"
+          - "Noah C. Benson"
         youtube_url: https://www.youtube.com/embed/dYepCA8UVZA?rel=0
 
       Thursday:
@@ -1594,7 +1594,7 @@
         event_page: https://neurohackademy.org/course/welcome/
         speakers:
         - Ariel Rokem
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/-epQHdFdUm4?rel=0
       - time: 10:30am
         title: Get-to-know-ya
@@ -1605,7 +1605,7 @@
         title: Introduction to programming in Python
         event_page: https://neurohackademy.org/course/introduction-to-programming-in-python/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/5KgyMerXYz8?rel=0
       - time: 11:30am
         title: Cloud computing
@@ -1636,7 +1636,7 @@
         title: Advanced programming in Python
         event_page: https://neurohackademy.org/course/advanced-programming-in-python/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/4zQfSBYdKFY?rel=0
       - time: 10:30am
         title: Using git and GitHub for collaboration
@@ -1685,7 +1685,7 @@
         title: Docker
         event_page: https://neurohackademy.org/course/docker/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: null
       - time: 3:00pm
         title: Coffee break
@@ -1720,7 +1720,7 @@
         title: Docker
         event_page: https://neurohackademy.org/course/docker/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: null
       - time: 12:30pm
         title: Self-supervised approaches for neural decoding and alignment
@@ -1743,7 +1743,7 @@
         title: Pytorch
         event_page: https://neurohackademy.org/course/pytorch/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: https://www.youtube.com/embed/OCpmJ9LPMlc?rel=0
       - time: 9:40am
         title: Data visualization in Python
@@ -2029,7 +2029,7 @@
         title: "Model\u2011based fMRI and HCP data"
         event_page: https://neurohackademy.org/course/model-based-fmri-and-hcp-data/
         speakers:
-        - Noah Benson
+        - Noah C. Benson
         youtube_url: null
       - time: 5:00pm
         title: Office hours

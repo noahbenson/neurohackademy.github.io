@@ -14,30 +14,61 @@ that year.
 
 <!-- Here we have the filters panel.
   --> 
-<div class="cc-sel-year-maindiv">
-  <p style="margin: 8px 16px;">Year:</p>
-  <div class="cc-sel-year-yearsdiv">
-    <label style="cc-sel-byear-label">
-      <input type="checkbox"
-             name="cc-sel-year"
-             value="none">
-      None
-      </label>
-    {% for y in site.data.calendar reversed %}
-      <label style="cc-sel-byear-label">
+<div class="cc-sel-panel">
+  <!-- The year selection -->
+  <div class="cc-sel-maindiv">
+    <p class="cc-sel-rowlbl">Year:</p>
+    <div class="cc-sel-optsdiv">
+      <label style="cc-sel-checkbox-label">
         <input type="checkbox"
                name="cc-sel-year"
-               value="{{y[0]}}">
-        {{y[0]}}
+               value="none">
+        None
         </label>
-      {% endfor %}
-    <label style="cc-sel-byear-label">
-      <input type="checkbox"
-             name="cc-sel-year"
-             value="all">
-      All
-      </label>
+      {% for y in site.data.calendar reversed %}
+      <label style="cc-sel-checkbox-label">
+          <input type="checkbox"
+                 name="cc-sel-year"
+                 value="{{y[0]}}">
+          {{y[0]}}
+          </label>
+        {% endfor %}
+      <label style="cc-sel-checkbox-label">
+        <input type="checkbox"
+               name="cc-sel-year"
+               value="all">
+        All
+        </label>
+      </div>
     </div>
+  <!-- The speaker selection -->
+<!--
+  <div class="cc-sel-maindiv">
+    <p class="cc-sel-rowlbl">Speaker:</p>
+    <div class="cc-sel-optsdiv">
+      <label style="cc-sel-checkbox-label">
+        <input type="checkbox"
+               name="cc-sel-speaker"
+               value="none">
+        None
+        </label>
+      {% for y in site.data.calendar reversed %}
+        <label style="cc-sel-checkbox-label">
+          <input type="checkbox"
+                 name="cc-sel-speaker"
+                 value="{{y[0]}}">
+          {{y[0]}}
+          </label>
+        {% endfor %}
+      <label style="cc-sel-checkbox-label">
+        <input type="checkbox"
+               name="cc-sel-speaker"
+               value="all">
+        All
+        </label>
+      </div>
+    </div>
+    -->
   </div>
 
 <hr/>
