@@ -24,12 +24,14 @@ The Neurohackademy is made possibly by many dedicated staff who organize the
 event and a community of scholars who curate and present the course content.
 
 
-{% for role in allroles %}
+{% for therole in allroles %}
+{% assign role = therole | capitalize %}
 
 ## {{role}}s
 
 {% for page in allpeople %}
-  {% if page.role == role %}
+  {% assign pagerole = page.role | capitalize %}
+  {% if pagerole == role %}
     {% assign fullname = page.forename | append: " " | append: page.surname %}
 <hr/>
 {% include biocard.html
