@@ -1,7 +1,9 @@
 ---
 layout: person
-forename: Jeremey
+forename: Jeremy
 surname: Miller
+org: Allen Institute
+github: jeremymiller
 role: instructor
 ---
 

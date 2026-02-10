@@ -6,8 +6,13 @@ layout: default
    | where_exp: "page", "page.path contains 'people/'"
    | where_exp: "page", "page.layout == 'person'"
    | sort: "surname" %}
-{% assign allroles = allpeople
-   | map: "role"
+{% capture allroles %}
+{% for person in allpeople %}{{ person.role | strip | capitalize }} {% endfor %}
+{% endcapture %}
+
+{% assign allroles = allroles
+   | strip
+   | split: " "
    | sort
    | uniq %}
 
@@ -18,14 +23,14 @@ h2 {
 }
 </style>
 
+
 # People
 
 The Neurohackademy is made possibly by many dedicated staff who organize the
 event and a community of scholars who curate and present the course content.
 
 
-{% for therole in allroles %}
-{% assign role = therole | capitalize %}
+{% for role in allroles %}
 
 ## {{role}}s
 
