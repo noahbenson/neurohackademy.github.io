@@ -3285,7 +3285,7 @@
       - time: 3:00pm
         title: AllenSDK and the Allen Brain Observatory
         speakers:
-        - Nicolas Cain
+        - Nicholas Cain
         - Justin Kiggins
         event_page: https://neurohackademy.org/course/allensdk-and-the-allen-brain-observatory/
         youtube_url: https://www.youtube.com/embed/n6rCVRlqT58?rel=0
@@ -3464,7 +3464,7 @@
         title: Allen Institute Office Hours
         speakers:
         - Justin Kiggins
-        - Nicolas Cain
+        - Nicholas Cain
         event_page: https://neurohackademy.org/course/allen-institute-office-hours/
         youtube_url: null
       - time: 3:00pm
@@ -3610,7 +3610,7 @@
       - time: 4:00pm
         title: Allen Institute Data and Software
         speakers:
-        - Nicolas Cain
+        - Nicholas Cain
         event_page: https://neurohackademy.org/course/allen-institute-data-and-software/
         youtube_url: https://www.youtube.com/embed/MSXWrbNLUas?rel=0
       Wednesday:
