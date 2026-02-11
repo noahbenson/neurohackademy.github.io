@@ -15,13 +15,18 @@
 /* Website Pallet
  */
 :root {
-    --bold-color: #FFFFFF;
+    --palette-cream: #FFFCF3;
+    --palette-gold: #85754D;
+    --palette-purple: #341954;
+    --palette-lavendar: #A187CF;
+    --palette-darkgray: #5A5A5A;
     --cap-bg-color: #85754D;
     --cap-fg-color: #FFFCF3;
-    --bg-color: #FFFCF3;
-    --mg-color: #5A5A5A;
-    --fg-color: #FFFCF3;
+    --bg-color: #CACACA;
+    --mg-color: #FFFCF3;
+    --fg-color: #341954;
     --menu-bg-color: #341954;
+    --menu-fg-color: #FFFCF3;
     --border-color: #A187CF;
     --masthead-height: 128px;
     --footer-height: 160px;
@@ -44,13 +49,13 @@ body {
     text-align: justify;
 }
 body b, body strong {
-    color: var(--bold-color);
+    color: var(--fg-color);
     font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $helveticaNeue;
-    color: var(--bold-color);
+    color: var(--fg-color);
 
     line-height: 1.7;
     margin: 3px 0 5px 0;
@@ -91,7 +96,7 @@ p {
 }
 
 a {
-  color: var(--bold-color);
+  color: var(--fg-color);
   text-decoration: none;
   font-weight: 400;
   cursor: pointer;
@@ -182,6 +187,7 @@ img {
     height: calc(100vh + var(--masthead-height));
     width: 100%;
     background-color: var(--cap-bg-color);
+    color: var(--cap-fg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -220,6 +226,32 @@ img {
     width: 1px;
     height: 1px;
     visibility: hidden; 
+}
+.splash-instructors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+.splash-instructor-card {
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 30px;
+}
+.splash-instructor-card-photo {
+    height: 200px;
+    max-width: 150px;
+    overflow: hidden;
+    border: 2px solid var(--border-color);
+}
+.splash-instructor-card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 
@@ -295,6 +327,7 @@ nav {
     font-family: $helveticaNeue;
     font-size: 20pt;
     background-color: var(--menu-bg-color);
+    color: var(--menu-fg-color);
     padding: 10px;
     display: flex;
     align-items: center;
@@ -311,7 +344,7 @@ nav {
     a {
         margin-left: 20px;
         margin-right: 20px;
-        color: var(--bold-color);
+        color: var(--menu-fg-color);
         text-align: center;
         font-weight: 300;
         font-size: 18pt;
@@ -330,10 +363,13 @@ nav {
  */
 
 .cc-year-div {
+    width: 100%;
 }
 .cc-week-div {
+    width: 100%;
 }
 .cc-day-div {
+    width: 100%;
 }
 .cc-year-h2 {
   margin-bottom: 0px;
@@ -363,7 +399,7 @@ nav {
   margin: 8px;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
   align-items: center;
   flex-grow: 1;
   flex-wrap: wrap;
@@ -544,9 +580,10 @@ nav {
   height: 160px;
   width: 100%;
   margin-top: 0px;
-  border-top: 3px solid var(--menu-bg-color);
+  border-top: 3px solid var(--border-bg-color);
   padding-bottom: 20px;
-  background: var(--cap-bg-color);
+  background: var(--menu-bg-color);
+  color: var(--menu-fg-color);
   font-size: 16px;
 }
 .footer-col {
@@ -661,6 +698,16 @@ nav {
 .biocard-link {
     font-size: 28px;
     margin: 0 5px;
+}
+.biocard-small .biocard-photodiv {
+    flex-grow: 0;
+    min-width: 275px;
+    height: 200px;
+    padding: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .biocard-small .biocard-textdiv {
     text-align: left;

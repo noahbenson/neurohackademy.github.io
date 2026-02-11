@@ -8,6 +8,7 @@ div: eScience Institute
 email: nben@uw.edu
 github: noahbenson
 website: https://nben.net/
+lastyear: 2026
 role: Director
 ---
 

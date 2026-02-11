@@ -43,6 +43,7 @@ const ccsel_year_updateRows = () => {
     }
 };
 
+
 ccsel_year_normboxes.forEach(
     (cb) => {
         cb.addEventListener('change', ccsel_year_updateRows);
@@ -63,65 +64,41 @@ ccsel_year_nonebox.addEventListener(
     });
 
 
-// The speaker selection stuff.
-const ccsel_speaker_checkboxes = Array.from(
-    document.getElementsByName('cc-sel-speaker'));
-const ccsel_speaker_allbox = ccsel_speaker_checkboxes.find(
-    item => item.value == "all");
-const ccsel_speaker_nonebox = ccsel_speaker_checkboxes.find(
-    item => item.value == "none");
-const ccsel_speaker_normboxes = Array.from(
-    ccsel_speaker_checkboxes.filter(
-        item => item.value != "all" && item.value != "none"));
-const ccsel_speaker_dict = Object.fromEntries(
-    Array.from(
-        ccsel_speaker_normboxes.map(
-            (cb) => {
-                // all years should be selected initially except none.
-                cb.checked = true;
-                return [
-                    cb.value,
-                    [cb, document.getElementById("cc-speaker-div-" + cb.value)]];
-            })));
-ccsel_speaker_allbox.checked = true;
-ccsel_speaker_nonebox.checked = false;
-
-const ccsel_speaker_updateRows = () => {
-    // First update all and none selections.
-    allsel = true;
-    nonesel = true;
-    ccsel_speaker_normboxes.forEach(
-        (cb) => {
-            allsel = allsel && cb.checked;
-            nonesel = nonesel && !cb.checked;
-        });
-    ccsel_speaker_allbox.checked = allsel;
-    ccsel_speaker_nonebox.checked = nonesel;
-    // now update the divs.
-    for (const [key, [cb, yeardiv]] of Object.entries(ccsel_speaker_dict)) {
-        if (cb.checked) {
-            yeardiv.style.display = 'block';
+// The has video or not selection stuff.
+const ccsel_hasvideo_either = document.getElementById('cc-sel-hasvideo-either');
+const ccsel_hasvideo_yes = document.getElementById('cc-sel-hasvideo-yes');
+const ccsel_hasvideo_no = document.getElementById('cc-sel-hasvideo-no');
+const ccsel_hasvideo_optsdiv = document.getElementById('cc-sel-hasvideo-optsdiv');
+let cur = "either";
+const ccsel_hasvideo_updateRows = (event) => {
+    if (event.target && event.target.matches('input[type="radio"]')) {
+        // First update all and none selections.
+        show_either = ccsel_hasvideo_either.checked;
+        show_yes = show_either | ccsel_hasvideo_yes.checked;
+        show_no = show_either | ccsel_hasvideo_no.checked;
+        // make sure we need to run.
+        const state = (show_either? "either" : show_yes? "yes" : "no");
+        if (state == cur) {
+            return;
         } else {
-            yeardiv.style.display = 'none';
+            cur = state;
         }
+        console.log(" --- " + state);
+        // now update the cc_all divs.
+        const hasvid_to = show_yes ? 'block' : 'none';
+        const novid_to = show_no ? 'block' : 'none';
+        cc_all.forEach(
+            (el) => {
+                // the video is the second child.
+                const viddiv = el.children[1];
+                if (viddiv.querySelector('iframe') !== null) {
+                    el.style.display = hasvid_to;
+                } else {
+                    el.style.display = novid_to;
+                }
+            });
     }
 };
-
-ccsel_speaker_normboxes.forEach(
-    (cb) => {
-        cb.addEventListener('change', ccsel_speaker_updateRows);
-    });
-ccsel_speaker_allbox.addEventListener(
-    'change',
-    () => {
-        const ch = ccsel_speaker_allbox.checked;
-        ccsel_speaker_normboxes.forEach((cb) => { cb.checked = ch; });
-        ccsel_speaker_updateRows();
-    });
-ccsel_speaker_nonebox.addEventListener(
-    'change',
-    () => {
-        const ch = !ccsel_speaker_nonebox.checked;
-        ccsel_speaker_normboxes.forEach((cb) => { cb.checked = ch; });
-        ccsel_speaker_updateRows();
-    });
+ccsel_hasvideo_yes.addEventListener('change', ccsel_hasvideo_updateRows);
+ccsel_hasvideo_no.addEventListener('change', ccsel_hasvideo_updateRows);
+ccsel_hasvideo_either.addEventListener('change', ccsel_hasvideo_updateRows);

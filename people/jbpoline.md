@@ -9,6 +9,7 @@ image: https://www.incf.org/sites/default/files/team/jb_poline.jpg
 email: jean-baptiste.poline@mcgill.ca
 github: jbpoline
 website: https://www.mcgill.ca/neuro/jean-baptiste-poline-phd
+lastyear: 2026
 role: Instructor
 ---
 

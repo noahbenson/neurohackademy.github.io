@@ -2,18 +2,27 @@
 layout: default
 ---
 
-# Neurohackademy Course Content
+# Archived Neurohackademy Lectures
 
-This page contains all the Neurohackademy lectures and presentations throughout
-the years. When available, session titles are linked to video recordings.
-Please click the heading for the year, below, to show the course content for
-that year.
+This page contains an archive of all the Neurohackademy lectures and
+presentations throughout the years. When available, embedded videos of lectures
+can be expanded by clicking on the arrows below.
+
+The videos displayed can be filtered using the selection options at the top of
+the page. To search for archived lectures by Neurohackademy instructor, visit
+that instructor's page in the [people section]({{site.baseurl}}/people/).
+
+We try to make all Neurohackademy lectures available to the
+public. Unvortunately, technical issues over the years have resulted in a
+number of videos improperly recorded, so videos are not available for all
+sessions.
 
 
-<hr/>
+## Filters
 
 <!-- Here we have the filters panel.
   --> 
+<hr/>
 <div class="cc-sel-panel">
   <!-- The year selection -->
   <div class="cc-sel-maindiv">
@@ -41,37 +50,35 @@ that year.
         </label>
       </div>
     </div>
-  <!-- The speaker selection -->
-<!--
+  <hr/>
+  <!-- The has video selection -->
   <div class="cc-sel-maindiv">
-    <p class="cc-sel-rowlbl">Speaker:</p>
-    <div class="cc-sel-optsdiv">
+    <p class="cc-sel-rowlbl">Has Video?</p>
+    <form class="cc-sel-optsdiv" id="cc-sel-hasvideo-optsdiv">
       <label style="cc-sel-checkbox-label">
-        <input type="checkbox"
-               name="cc-sel-speaker"
-               value="none">
-        None
+        <input type="radio"
+               name="cc-sel-hasvideo"
+               id="cc-sel-hasvideo-yes">
+        Yes
         </label>
-      {% for y in site.data.calendar reversed %}
-        <label style="cc-sel-checkbox-label">
-          <input type="checkbox"
-                 name="cc-sel-speaker"
-                 value="{{y[0]}}">
-          {{y[0]}}
-          </label>
-        {% endfor %}
       <label style="cc-sel-checkbox-label">
-        <input type="checkbox"
-               name="cc-sel-speaker"
-               value="all">
-        All
+        <input type="radio"
+               name="cc-sel-hasvideo"
+               id="cc-sel-hasvideo-no">
+        No
         </label>
-      </div>
+      <label style="cc-sel-checkbox-label">
+        <input type="radio"
+               name="cc-sel-hasvideo"
+               id="cc-sel-hasvideo-either"
+               checked>
+        Either
+        </label>
+      </form>
     </div>
-    -->
   </div>
-
 <hr/>
+
 
 <!-- Here we have the list of events.
   --> 

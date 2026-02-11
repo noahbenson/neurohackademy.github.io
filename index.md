@@ -22,3 +22,35 @@ learned and to other participant-directed activities: breakout sessions and
 collaboration sessions on topics of interest.
 
 
+## 2026 Instructors
+
+{% assign allpeople = site.pages
+   | where_exp: "page", "page.path contains 'people/'"
+   | where_exp: "page", "page.layout == 'person'"
+   | sort: "surname" %}
+{% assign currentYear = 'now' | date: "%Y" | plus: 0 %}
+
+<div class="splash-instructors">
+  {% for page in allpeople %}
+    {% if page.lastyear == currentYear %}
+      {% assign fullname = page.forename | append: " " | append: page.surname %}
+      <div class="splash-instructor-card">
+        <div class="splash-instructor-card-photo">
+          <img
+            {% if page.image %}
+              src="{{page.image}}"
+              alt="The profile picture for {{fullname}}"
+            {% elsif page.github %}
+              src="https://github.com/{{page.github}}.png"
+              alt="The GitHub profile picture for {{fullname}}"
+            {% else %}
+              src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"
+              alt="An anonymous profile picture"
+              {% endif %}
+            />
+          </div>
+          <p><a href="{{site.baseurl}}/{{page.url}}">{{fullname}}</a></p>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
