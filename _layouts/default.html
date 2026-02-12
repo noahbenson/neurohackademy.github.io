@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html>
+<!DOCTYPE html> <html lang="en">
 <head>
   <title>
     {% if page.title %} {{page.title}} – {% endif %}
@@ -16,6 +16,13 @@
         type="application/rss+xml"
         title="{{site.title}}"
         href="{{site.baseurl}}/feed.xml"/>
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
   {% include scripts.html %}
   <!-- Originally created with Jekyll Now -
        http://github.com/barryclark/jekyll-now;
@@ -25,7 +32,11 @@
 <body>
   <div class="default-masthead">
     <div class="default-banner-container">
-      <div class="default-banner"></div>
+      <a href="#main" class="skip-link">Skip to main content</a>
+      <div class="default-banner">
+        <p>
+          <span style="font-weight: 700">NEURO</span><span style="font-weight: 400">HACK</span><span style="font-weight: 100">ADEMY</span>
+        </div>
       </div>
     <header class="clearfix" id="pageHeader">
       {% include navbar.html %}

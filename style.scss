@@ -9,6 +9,9 @@
 
 @use "reset" as *;
 @use "variables" as *;
+
+@import url('https://fonts.googleapis.com');
+
 /* Syntax highlighting @import is at the bottom of this file */
 
 
@@ -204,17 +207,44 @@ img {
     max-width: 100%;
     height: 100vh;
 }
+.splash-banner-logotext {
+    color: var(--cap-fg-color);
+    font-size: 56px;
+    width: 100%;
+    max-width: 940px;
+    z-index: 101;
+    height: 100%;
+    margin: 0;
+    float: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+}
 .splash-banner {
-    background-image: url('{{site.baseurl}}/{{site.imgpath}}/nh-logo-brain-gold.png');
+    background-image: url('{{site.baseurl}}/{{site.imgpath}}/nh-brain-gold.png');
     background-repeat: no-repeat;
-    background-size: 100% auto; 
-    background-position: center center;
+    background-size: 400px; 
+    background-position: 100% 50%;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    position: relative;
     width: 100%;
     max-width: 940px;
     z-index: 101;
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    transition: background-size 0.3s ease-out;
 }
 .splash-text {
     font-size: 48px;
@@ -283,15 +313,24 @@ img {
     align-items: center;
 }
 .default-banner {
-    background-image: url('{{site.baseurl}}/{{site.imgpath}}/nh-logo-brain-gold.png');
+    background-image: url('{{site.baseurl}}/{{site.imgpath}}/nh-brain-gold.png');
     background-repeat: no-repeat;
-    background-size: cover; 
-    background-position: center center;
+    background-size: 400px; 
+    background-position: 100% 50%;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    color: var(--cap-fg-color);
+    font-size: 56px;
     width: 100%;
     max-width: 940px;
     z-index: 101;
     height: 100%;
     float: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
 
@@ -313,7 +352,27 @@ img {
     max-width: 940px;
     padding: 20px;
 }
-
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    position: absolute;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    background-color: var(--cap-bg-color);
+    color: var(--cap-fg-color);
+    z-index: 1000;
+    font-size: 16px;
+    text-align: left;
+    left: 0;
+    top: 0;
+}
 
 /*
  * Header and nav stuff
