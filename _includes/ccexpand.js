@@ -9,9 +9,9 @@ Array.from(a_els).forEach(
             el.classList.toggle('cc-open');
             if (!viddiv.classList.contains('cc-video-active')) {
                 ifr.src = ifr.src;
-                ift.tabIndex = -1;
+                ifr.tabIndex = -1;
             } else {
-                ift.tabIndex = 0;
+                ifr.tabIndex = 0;
             }
         };
         const keyFn = (e) => {
